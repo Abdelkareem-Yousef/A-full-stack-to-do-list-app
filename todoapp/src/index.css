@@ -1,0 +1,30 @@
+:root {
+  color-scheme: light;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes swing {
+  0%   { transform: rotate(-15deg); }
+  25%  { transform: rotate(15deg); }
+  50%  { transform: rotate(-10deg); }
+  75%  { transform: rotate(8deg); }
+  100% { transform: rotate(-3deg); }
+}
+
+@keyframes flip {
+  0%   { transform: rotateY(0deg); }
+  50%  { transform: rotateY(90deg); }
+  100% { transform: rotateY(0deg); }
+}
+
+.swing {
+  transform-origin: top center;
+  animation: swing 1.2s ease forwards;
+}
+
+.flip {
+  animation: flip 0.5s ease forwards;
+}
